@@ -76,10 +76,11 @@ function tienePropiedad(objeto, propiedad) {
   // "propiedad" es un string
   // De lo contrario, devuelve "false"
   // Tu código:
-  if (objeto[propiedad]) {
-    return true;
-  }
-  return false;
+  return objeto.hasOwnProperty(propiedad);
+  // if (objeto[propiedad]) {
+  //   return true;
+  // }
+  // return false;
 }
 
 function verificarPassword(usuario, password) {
@@ -106,6 +107,7 @@ function agregarAmigo(usuario, nuevoAmigo) {
   // Agrega "nuevoAmigo" al final de ese array
   // Devuelve el objeto "usuario"
   // Tu código:
+  console.log("SOY EL USUARIO", usuario);
   usuario.amigos.push(nuevoAmigo);
   return usuario;
 }
@@ -138,7 +140,7 @@ function sumarLikesDeUsuario(usuario) {
 
 function agregarMetodoCalculoDescuento(producto) {
   // Agregar un método (función) al objeto "producto" llamado "calcularPrecioDescuento"
-  // Este método debe multiplicar el "precio" del "producto" ("producto.precio" o "producto[precio]") y "porcentajeDeDescuento" para obtener el descuento
+  // Este método debe multiplicar el "precio" del "producto" ("producto.precio" o "producto["precio"]") y "porcentajeDeDescuento" para obtener el descuento
   // El método resta el descuento del precio y devuelve el precio con descuento
   // Devuelve el objeto "producto" al final de la función
   // Ejemplo:
